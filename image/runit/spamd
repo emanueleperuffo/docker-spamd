@@ -1,4 +1,4 @@
 #!/bin/sh
 set -e
 
-exec spamd --listen=0.0.0.0 --cf="envelope_sender_header X-Envelope-From" --create-prefs --max-children=$SPAMD_MAX_CHILDREN --helper-home-dir
+exec spamd --listen=0.0.0.0 --port=783 --allowed-ips=0.0.0.0/0 --create-prefs --max-children=$SPAMD_MAX_CHILDREN --helper-home-dir
